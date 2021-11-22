@@ -1,0 +1,8 @@
+<h2>Liste de dragons</h2>
+
+<ng-container *ngIf="dragons">
+  <app-dragon (deleteTriggered)="removeDragon($event)" *ngFor="let dragon of dragons" [dragon]="dragon"></app-dragon>
+  <div *ngIf="creationInProgress">Dragon en cours de création...</div>
+  <button (click)="changeBoss()">Changer le boss</button>
+  <button (click)="createRandomDragon()">Créer un dragon aléatoire</button>
+</ng-container>

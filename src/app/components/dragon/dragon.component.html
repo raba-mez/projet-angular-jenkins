@@ -1,0 +1,9 @@
+<div [ngClass]="{'removalInProgress': dragon.removalInProgress}">
+  {{ dragon.name }}
+  <ul>
+    <li>Couleur : {{ dragon.color | titlecase }}</li>
+    <li>Pouvoir : {{ dragon.power }}</li>
+    <li>Taille : {{ dragon | dragonSize }}</li>
+  </ul>
+  <button (click)=removeDragon()>Supprimer le dragon</button>
+</div>
